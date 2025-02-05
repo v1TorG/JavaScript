@@ -1,12 +1,19 @@
-function verificar() {
+function carregar() {
+    var msg = window.document.getElementById('msg')
+    var img = window.document.getElementById('imagem')
     var data = new Date()
-    var ano = data.getFullYear()
-    var fano = document.getElementById('txtano')
-    var res = document.getElementById('res')
+    var hora = data.getHours()
 
-    if (fano.value.length == 0 || fano.value > ano){
-        window.alert('[ERRO] Verifique os dados e tente novamente!')
+    msg.innerHTML = (`Agora são ${hora} horas.`)
+
+    if (hora >= 0 && hora < 12){
+        document.body.style.background = '#f0e15b'
+        img.src = 'manhã.jpg'
+    } else if (hora >= 12 && hora <18){
+        document.body.style.background = '#e9895d'
+        img.src = 'tarde.jpg'
     } else {
-        window.alert('ok')
+        document.body.style.background = '#5c5b5b'
+        img.scr = 'noite.jpg'
     }
-}
+} 
