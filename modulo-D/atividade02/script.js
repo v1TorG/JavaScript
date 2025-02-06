@@ -38,12 +38,12 @@ function verificar() {
             } else if (idade < 55){
                 img.setAttribute('src', 'mulherF.jpg') 
             } else {
-                img.setAttribute('src', 'idodaF.jpg') 
+                img.setAttribute('src', 'idosaF.jpg') 
             }
 
         }
         res.style.textAlign = 'center'
-        res.innerHTML = `Dedectamos ${genero} com ${idade} anos.`
+        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         res.appendChild(img)
     }
 }                                          
